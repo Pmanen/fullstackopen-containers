@@ -1,0 +1,315 @@
+PS: sorry I used vim instead of nano :)
+
+docker start -i pedantic_kepler
+root@4dc54966fc8a:/# apt-get update
+Get:1 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [136 kB]
+Get:3 http://security.ubuntu.com/ubuntu resolute-security/main arm64 Packages [62.4 kB]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/restricted arm64 Packages [55.1 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe arm64 Packages [48.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [136 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [136 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main arm64 Packages [1860 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/universe arm64 Packages [19.9 MB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/multiverse arm64 Packages [298 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/restricted arm64 Packages [231 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 Packages [95.6 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/universe arm64 Packages [48.9 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/restricted arm64 Packages [117 kB]
+Fetched 23.3 MB in 2s (14.6 MB/s)
+Reading package lists... Done
+root@4dc54966fc8a:/# apt-get -y install vim
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Solving dependencies... Done
+The following additional packages will be installed:
+  libexpat1 libffi8 libgpm2 libpython3.14 libpython3.14-minimal
+  libpython3.14-stdlib libreadline8t64 libsodium23 libsqlite3-0 media-types
+  netbase readline-common tzdata vim-common vim-runtime xxd
+Suggested packages:
+  gpm readline-doc ctags vim-doc vim-scripts
+The following NEW packages will be installed:
+  libexpat1 libffi8 libgpm2 libpython3.14 libpython3.14-minimal
+  libpython3.14-stdlib libreadline8t64 libsodium23 libsqlite3-0 media-types
+  netbase readline-common tzdata vim vim-common vim-runtime xxd
+0 upgraded, 17 newly installed, 0 to remove and 2 not upgraded.
+Need to get 17.3 MB of archives.
+After this operation, 77.3 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main arm64 libexpat1 arm64 2.7.4-1 [85.7 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main arm64 libffi8 arm64 3.5.2-4 [24.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute/main arm64 libpython3.14-minimal arm64 3.14.4-1 [912 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute/main arm64 media-types all 14.0.0build1 [31.4 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main arm64 netbase all 6.5build1 [13.0 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main arm64 tzdata all 2026a-3ubuntu1 [194 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main arm64 readline-common all 8.3-4 [61.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main arm64 libreadline8t64 arm64 8.3-4 [162 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main arm64 libsqlite3-0 arm64 3.46.1-9 [711 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main arm64 libpython3.14-stdlib arm64 3.14.4-1 [2360 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 vim-common all 2:9.1.2141-1ubuntu4.1 [494 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 xxd arm64 2:9.1.2141-1ubuntu4.1 [67.3 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute/main arm64 libgpm2 arm64 1.20.7-12build1 [15.0 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/main arm64 libpython3.14 arm64 3.14.4-1 [2597 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main arm64 libsodium23 arm64 1.0.18-2 [120 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 vim-runtime all 2:9.1.2141-1ubuntu4.1 [7511 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute-updates/main arm64 vim arm64 2:9.1.2141-1ubuntu4.1 [1957 kB]
+Fetched 17.3 MB in 1s (34.1 MB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 17.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/aarch64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 17.)
+debconf: falling back to frontend: Teletype
+Preconfiguring packages ...
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration
+questions will narrow this down by presenting a list of cities, representing
+the time zones in which they are located.
+
+  1. Africa   3. Antarctica  5. Asia      7. Australia  9. Indian    11. Etc
+  2. America  4. Arctic      6. Atlantic  8. Europe     10. Pacific
+Geographic area: 8
+
+Please select the city or region corresponding to your time zone.
+
+  1. Amsterdam   14. Copenhagen   27. London      40. Riga        53. Ulyanovsk
+  2. Andorra     15. Dublin       28. Luxembourg  41. Rome        54. Vaduz
+  3. Astrakhan   16. Gibraltar    29. Madrid      42. Samara      55. Vatican
+  4. Athens      17. Guernsey     30. Malta       43. San_Marino  56. Vienna
+  5. Belfast     18. Helsinki     31. Mariehamn   44. Sarajevo    57. Vilnius
+  6. Belgrade    19. Isle_of_Man  32. Minsk       45. Saratov     58. Volgograd
+  7. Berlin      20. Istanbul     33. Monaco      46. Simferopol  59. Warsaw
+  8. Bratislava  21. Jersey       34. Moscow      47. Skopje      60. Zagreb
+  9. Brussels    22. Kaliningrad  35. Nicosia     48. Sofia       61. Zurich
+  10. Bucharest  23. Kirov        36. Oslo        49. Stockholm
+  11. Budapest   24. Kyiv         37. Paris       50. Tallinn
+  12. Busingen   25. Lisbon       38. Podgorica   51. Tirane
+  13. Chisinau   26. Ljubljana    39. Prague      52. Tiraspol
+Time zone: 1
+
+Selecting previously unselected package libexpat1:arm64.
+(Reading database ... 7720 files and directories currently installed.)
+Preparing to unpack .../00-libexpat1_2.7.4-1_arm64.deb ...
+Unpacking libexpat1:arm64 (2.7.4-1) ...
+Selecting previously unselected package libffi8:arm64.
+Preparing to unpack .../01-libffi8_3.5.2-4_arm64.deb ...
+Unpacking libffi8:arm64 (3.5.2-4) ...
+Selecting previously unselected package libpython3.14-minimal:arm64.
+Preparing to unpack .../02-libpython3.14-minimal_3.14.4-1_arm64.deb ...
+Unpacking libpython3.14-minimal:arm64 (3.14.4-1) ...
+Selecting previously unselected package media-types.
+Preparing to unpack .../03-media-types_14.0.0build1_all.deb ...
+Unpacking media-types (14.0.0build1) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../04-netbase_6.5build1_all.deb ...
+Unpacking netbase (6.5build1) ...
+Selecting previously unselected package tzdata.
+Preparing to unpack .../05-tzdata_2026a-3ubuntu1_all.deb ...
+Unpacking tzdata (2026a-3ubuntu1) ...
+Selecting previously unselected package readline-common.
+Preparing to unpack .../06-readline-common_8.3-4_all.deb ...
+Unpacking readline-common (8.3-4) ...
+Selecting previously unselected package libreadline8t64:arm64.
+Preparing to unpack .../07-libreadline8t64_8.3-4_arm64.deb ...
+Adding 'diversion of /lib/aarch64-linux-gnu/libhistory.so.8 to /lib/aarch64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/aarch64-linux-gnu/libhistory.so.8.2 to /lib/aarch64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/aarch64-linux-gnu/libreadline.so.8 to /lib/aarch64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/aarch64-linux-gnu/libreadline.so.8.2 to /lib/aarch64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'
+Unpacking libreadline8t64:arm64 (8.3-4) ...
+Selecting previously unselected package libsqlite3-0:arm64.
+Preparing to unpack .../08-libsqlite3-0_3.46.1-9_arm64.deb ...
+Unpacking libsqlite3-0:arm64 (3.46.1-9) ...
+Selecting previously unselected package libpython3.14-stdlib:arm64.
+Preparing to unpack .../09-libpython3.14-stdlib_3.14.4-1_arm64.deb ...
+Unpacking libpython3.14-stdlib:arm64 (3.14.4-1) ...
+Selecting previously unselected package vim-common.
+Preparing to unpack .../10-vim-common_2%3a9.1.2141-1ubuntu4.1_all.deb ...
+Unpacking vim-common (2:9.1.2141-1ubuntu4.1) ...
+Selecting previously unselected package xxd.
+Preparing to unpack .../11-xxd_2%3a9.1.2141-1ubuntu4.1_arm64.deb ...
+Unpacking xxd (2:9.1.2141-1ubuntu4.1) ...
+Selecting previously unselected package libgpm2:arm64.
+Preparing to unpack .../12-libgpm2_1.20.7-12build1_arm64.deb ...
+Unpacking libgpm2:arm64 (1.20.7-12build1) ...
+Selecting previously unselected package libpython3.14:arm64.
+Preparing to unpack .../13-libpython3.14_3.14.4-1_arm64.deb ...
+Unpacking libpython3.14:arm64 (3.14.4-1) ...
+Selecting previously unselected package libsodium23:arm64.
+Preparing to unpack .../14-libsodium23_1.0.18-2_arm64.deb ...
+Unpacking libsodium23:arm64 (1.0.18-2) ...
+Selecting previously unselected package vim-runtime.
+Preparing to unpack .../15-vim-runtime_2%3a9.1.2141-1ubuntu4.1_all.deb ...
+Adding 'diversion of /usr/share/vim/vim91/doc/help.txt to /usr/share/vim/vim91/doc/help.txt.vim-tiny by vim-runtime'
+Adding 'diversion of /usr/share/vim/vim91/doc/tags to /usr/share/vim/vim91/doc/tags.vim-tiny by vim-runtime'
+Unpacking vim-runtime (2:9.1.2141-1ubuntu4.1) ...
+Selecting previously unselected package vim.
+Preparing to unpack .../16-vim_2%3a9.1.2141-1ubuntu4.1_arm64.deb ...
+Unpacking vim (2:9.1.2141-1ubuntu4.1) ...
+Setting up libexpat1:arm64 (2.7.4-1) ...
+Setting up media-types (14.0.0build1) ...
+Setting up libsodium23:arm64 (1.0.18-2) ...
+Setting up libgpm2:arm64 (1.20.7-12build1) ...
+Setting up libpython3.14-minimal:arm64 (3.14.4-1) ...
+Setting up libsqlite3-0:arm64 (3.46.1-9) ...
+Setting up xxd (2:9.1.2141-1ubuntu4.1) ...
+Setting up tzdata (2026a-3ubuntu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/aarch64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Current default time zone: 'Europe/Amsterdam'
+Local time is now:      Fri May 15 17:27:12 CEST 2026.
+Universal Time is now:  Fri May 15 15:27:12 UTC 2026.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up vim-common (2:9.1.2141-1ubuntu4.1) ...
+Setting up libffi8:arm64 (3.5.2-4) ...
+Setting up netbase (6.5build1) ...
+Setting up vim-runtime (2:9.1.2141-1ubuntu4.1) ...
+Setting up readline-common (8.3-4) ...
+Setting up libreadline8t64:arm64 (8.3-4) ...
+Setting up libpython3.14-stdlib:arm64 (3.14.4-1) ...
+Setting up libpython3.14:arm64 (3.14.4-1) ...
+Setting up vim (2:9.1.2141-1ubuntu4.1) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group editor) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/editor.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group editor) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/editor.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group editor) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/editor.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group editor) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/editor.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group editor) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/editor.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group editor) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/editor.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group editor) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/editor.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group editor) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/tr/man1/editor.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group editor) does not exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/ex.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group ex) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/ex.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group ex) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/ex.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group ex) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/ex.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group ex) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/ex.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group ex) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/ex.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group ex) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/ex.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group ex) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/ex.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group ex) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/tr/man1/ex.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group ex) does not exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/vi.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group vi) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/vi.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group vi) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/vi.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group vi) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/vi.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group vi) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/vi.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group vi) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/vi.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group vi) does not exist
+
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+"/usr/src/app/index.js" 0L, 0B                                0,0-1         All
+
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+"/usr/src/app/index.js" 0L, 0B                                0,0-1         All
+console.log('Hello World')
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/vi.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group vi) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/vi.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group vi) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/tr/man1/vi.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group vi) does not exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/view.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group view) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/view.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group view) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/view.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group view) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/view.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group view) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/view.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group view) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/view.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group view) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/view.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group view) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/view.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group view) does not exist
+update-alternatives: warning: skip creation of /usr/share/man/tr/man1/view.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group view) does not exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+root@4dc54966fc8a:/# vim /usr/src/app/index.js
