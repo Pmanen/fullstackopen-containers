@@ -1,0 +1,27 @@
+➜  todo-backend git:(main) ✗ docker ps
+CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                                           NAMES
+3c0de433acb9   redis:8.8-m03-alpine3.23   "docker-entrypoint.s…"   47 minutes ago   Up 47 minutes   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp     todo-backend-redis-1
+2310f0d44ff4   mongo                      "docker-entrypoint.s…"   43 hours ago     Up 47 minutes   0.0.0.0:3456->27017/tcp, [::]:3456->27017/tcp   todo-backend-mongo-1
+➜  todo-backend git:(main) ✗ docker exec -it todo-backend-redis-1 redis-cli
+127.0.0.1:6379> KEYS *
+1) "count"
+127.0.0.1:6379> GET count
+"2"
+127.0.0.1:6379> SET count 9001
+OK
+127.0.0.1:6379> GET count
+"9001"
+127.0.0.1:6379> GET count
+"9002"
+127.0.0.1:6379> DEL count
+(integer) 1
+127.0.0.1:6379> KEYS *
+(empty array)
+127.0.0.1:6379> GET count
+"1"
+
+(in other terminal window:)
+➜  ~ curl -X POST http://localhost:3000/todos -H "Content-Type: application/json" -d '{"text":"test3 todo", "done":"false"}'
+{"text":"test3 todo","done":false,"_id":"6a0c8fb3177be7883030b0ce","__v":0}%
+➜  ~ curl -X POST http://localhost:3000/todos -H "Content-Type: application/json" -d '{"text":"test3 todo new", "done":"false"}'
+{"text":"test3 todo new","done":false,"_id":"6a0c9012177be7883030b0d0","__v":0}%                     ➜  ~
