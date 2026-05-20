@@ -9,6 +9,8 @@ ENV VITE_BACKEND_URL=http://localhost:3000
 
 RUN npm run build
 
+RUN npm run test
+
 # new stage
 FROM nginx:1.29-alpine
 
