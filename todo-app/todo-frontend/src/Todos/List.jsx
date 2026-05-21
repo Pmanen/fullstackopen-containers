@@ -3,6 +3,10 @@ import Todo from './Todo'
 
 const TodoList = ({ todos, deleteTodo, completeTodo }) => {
 
+  if (!Array.isArray(todos) || todos.length === 0) {
+    return <p>No todos yet (or connection failed whoops)</p>
+  }
+
   return (
     <>
       {todos.map(todo => {
