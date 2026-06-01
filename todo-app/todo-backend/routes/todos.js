@@ -9,19 +9,6 @@ router.get("/", async (_, res) => {
   res.send(todos);
 });
 
-/* GET number of added todos. */
-router.get("/statistics", async (_, res) => {
-  try {
-    let count = await get("count");
-    count = parseInt(count) || 0;
-    res.send({
-      added_todos: count,
-    });
-  } catch (error) {
-    res.status(500).send({ error: "Failed to retrieve statistics" });
-  }
-});
-
 /* POST todo to listing. */
 router.post("/", async (req, res) => {
   const todo = await Todo.create({
@@ -46,7 +33,7 @@ const findByIdMiddleware = async (req, res, next) => {
 
 /* DELETE todo. */
 singleRouter.delete("/", async (req, res) => {
-  await req.todo.delete();
+  await req.todo.deleteOne();
   res.sendStatus(200);
 });
 
